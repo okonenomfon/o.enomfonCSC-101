@@ -13,11 +13,11 @@ fn main() {
     let qa:f64 = 1.0;
 
     //sum
-    let s = t + m + h + d + a;
+    let s = (t * qt) + (m * qm) + (h * qh) + (d * qd) + (a * qa);
     println!("Sum is {}", s);
     let tq = qt + qm + qh + qd + qa;
     println!("Total quantity is {}", tq);
-    let me = s/tq;
-    println!("Mean(Average) is {}", me);
+    let mean = s/tq;
+    println!("Mean(Average) is {}", mean);
 
 }
