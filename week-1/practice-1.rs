@@ -1,9 +1,9 @@
 fn main(){
-	printIn!("Welcome to COS 101")
+	println!("Welcome to COS 101")
 
-	printIn!("The course learning outcome is as follows:")
+	println!("The course learning outcome is as follows:")
 
-	printIn!("1. Distinguish between computer and computer programming,/n
+	println!("1. Distinguish between computer and computer programming,/n
 	2. Develop some techniques in computer science,/n
 	3. Understand the different areas of study in computer science,/n
 	4. Conversant with applications of computer science,/n
