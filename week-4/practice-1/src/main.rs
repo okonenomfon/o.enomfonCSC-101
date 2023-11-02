@@ -8,6 +8,6 @@ fn main(){
 
     let dept:&'static str = "Software Engineering";
     let school:&'static str = "School of Science and Technology";
-    println!("Department: {}, \nSchool: {}", dept,school);
+    println!("Department: {} \nSchool: {}", dept,school);
     
 }

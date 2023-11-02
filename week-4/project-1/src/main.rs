@@ -24,11 +24,11 @@ fn main() {
     let speed_1:f32;
 
     speed_1 = km1 / t1;
-    println!("Speed for the 1st value = {}",speed_1);
+    println!("Speed for the 1st value = {} kmph",speed_1);
 
     let speed_2:f32;
 
     speed_2 = km2 / t2;
-    println!("Speed for the 2nd value = {}",speed_2);
+    println!("Speed for the 2nd value = {} kmph",speed_2);
 
 }
