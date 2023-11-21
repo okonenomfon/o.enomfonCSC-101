@@ -15,6 +15,7 @@ fn main() {
     for a in 1..=n {
         for b in 1..=12 {
             let c = a * b;
+            println!("{} times tables", a);
             println!("
             {} x {} = {}", a, b, c);
         }
