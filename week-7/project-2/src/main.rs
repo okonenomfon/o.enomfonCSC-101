@@ -71,7 +71,7 @@ fn main() {
                 io::stdin().read_line(&mut sec).expect("Failed to read line");
                 sib_info.push_str(&format!("WAEC Status: Yes, Secondary School: {}", sec));
             } else {
-                println!("Enter current class level:");
+                println!("Enter current class:");
                 let mut class = String::new();
                 io::stdin().read_line(&mut class).expect("Failed to read line");
                 sib_info.push_str(&format!("WAEC Status: No, Current Class: {}", class));
@@ -84,7 +84,7 @@ fn main() {
     println!("Sibling Data:");
     for (s, sib) in sibs_data.iter().enumerate() {
         if !sib.is_empty() {
-            println!("Sibling {}: {}", s + 1, sib);
+            println!("Sibling {}: {}", s, sib);
         }
     }
 }
