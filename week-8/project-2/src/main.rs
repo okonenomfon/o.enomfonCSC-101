@@ -5,10 +5,16 @@ fn main() {
 
     println!("Enter the number of developers:");
     io::stdin()
-        .read_line(&mut devs_input)
-        .expect("Failed to read line");
+    .read_line(&mut devs_input)
+    .expect("Failed to read line");
 
-    let num_devs: u32 = devs_input.trim().parse().expect("Failed to parse");
+    let num_devs: u32 = match devs_input.trim().parse() {
+        Ok(num) => num,
+        Err(_) => {
+            println!("Invalid input for the number of developers. Defaulting to 0.");
+            0
+        }
+    };
 
     let mut dev_data: Vec<(String, i32)> = Vec::new();
 
@@ -18,13 +24,13 @@ fn main() {
 
         println!("Enter your name {}: ", i + 1);
         io::stdin()
-            .read_line(&mut dev_name)
-            .expect("Failed to read line");
+        .read_line(&mut dev_name)
+        .expect("Failed to read line");
 
         println!("Enter years of experience {}: ", i + 1);
         io::stdin()
-            .read_line(&mut dev_exp)
-            .expect("Failed to read line");
+        .read_line(&mut dev_exp)
+        .expect("Failed to read line");
 
         let exp: i32 = dev_exp.trim().parse().expect("Failed to read line");
 
@@ -32,12 +38,13 @@ fn main() {
     }
 
     let mut maximum_name = "No developers".to_string();
-    let mut maximum_exp = 0;
+    let mut maximum_exp:i32 = 0;
 
-    for &(ref name, exp) in &dev_data {
-        if exp > maximum_exp {
-            maximum_name = name.clone();
-            maximum_exp = exp;
+    for developer in &dev_data {
+        let (name, exp) = developer;
+        if exp > &maximum_exp {
+            maximum_name = name.to_string();
+            maximum_exp = *exp;
         }
     }
 
@@ -45,5 +52,4 @@ fn main() {
         "Developer with the highest experience: {} with {} years",
         maximum_name, maximum_exp
     );
-
 }
