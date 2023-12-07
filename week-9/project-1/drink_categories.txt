@@ -1,0 +1,16 @@
+Lager:
+= 33 Export
+= Desperado
+= Goldberg
+= Gulder
+= Heineken
+= Star
+Stout:
+= Legend
+= Turbo King
+= Williams
+Non_Alcoholic:
+= Maltina
+= Amstel Malta
+= Malta Gold
+= Fayrouz
