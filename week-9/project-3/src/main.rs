@@ -11,20 +11,32 @@ fn main() {
 
     let mut file = File::create(file_name).expect("Error: Unable to create or open the file.");
 
-    file.write_all(format!("{:<50}\n", "CONVICTED MINISTERS\n")
+    file.write_all(format!("{:<50}\n", "                                 CONVICTED MINISTERS\n")
         .as_bytes())
         .expect("Error writing to file");
 
-    file.write_all(format!("{:<50} {:<50} {:<30}\n", "NAME", "MINISTRY", "GEOPOLITICAL ZONE")
+    file.write_all(format!("_________________________________________________________________________________________________\n")
+        .as_bytes())
+        .expect("Error writing to file");
+
+    file.write_all(format!("{:<30} |    {:<30} |    {:<30}\n", "NAME", "MINISTRY", "GEOPOLITICAL ZONE")
+        .as_bytes())
+        .expect("Error writing to file");
+
+    file.write_all(format!("_________________________________________________________________________________________________\n")
         .as_bytes())
         .expect("Error writing to file");
 
     for n in 0..ministers_names.len() {
         file.write_all(
-            format!("{:<50} {:<50} {:<30}\n", ministers_names[n], ministries[n], geo_zone[n])
+            format!("{:<30} |    {:<30} |    {:<30}\n", ministers_names[n], ministries[n], geo_zone[n])
             .as_bytes()
         )
         .expect("Error writing to file");
+
+        file.write_all(format!("_________________________________________________________________________________________________\n")
+            .as_bytes())
+            .expect("Error writing to file");
     }
 
     println!("Minister's details written to {}", file_name);

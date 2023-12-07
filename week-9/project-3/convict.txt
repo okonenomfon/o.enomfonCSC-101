@@ -1,8 +1,15 @@
-CONVICTED MINISTERS
-                              
-NAME                                               MINISTRY                                           GEOPOLITICAL ZONE             
-Aigbogun Alamba Daudu                              Internal Affairs                                   South West                    
-Murtala Afeez Bendu                                Justice                                            North East                    
-Okorocha Calistus Ogbona                           Defense                                            South South                   
-Adewale Jimoh Akanbi                               Power & Steel                                      North Central                 
-Osazuwa Faith Etieye                               Petroleum                                          South East                    
+                                 CONVICTED MINISTERS
+
+_________________________________________________________________________________________________
+NAME                           |    MINISTRY                       |    GEOPOLITICAL ZONE             
+_________________________________________________________________________________________________
+Aigbogun Alamba Daudu          |    Internal Affairs               |    South West                    
+_________________________________________________________________________________________________
+Murtala Afeez Bendu            |    Justice                        |    North East                    
+_________________________________________________________________________________________________
+Okorocha Calistus Ogbona       |    Defense                        |    South South                   
+_________________________________________________________________________________________________
+Adewale Jimoh Akanbi           |    Power & Steel                  |    North Central                 
+_________________________________________________________________________________________________
+Osazuwa Faith Etieye           |    Petroleum                      |    South East                    
+_________________________________________________________________________________________________

@@ -14,17 +14,17 @@ fn main() {
 
     file.write_all(b"           STUDENT INFORMATION MANAGEMENT SYSTEM\n").expect("Error writing to file");
 
-    file.write_all(format!("{:<20} {:<20} {:<30} {:<10}\n", "Name", "Matric No.", "Department", "Level")
+    file.write_all(format!("{:<20} | {:<20} | {:<30} | {:<10}\n", "Name", "Matric No.", "Department", "Level")
         .as_bytes())
         .expect("Error writing to file");
 
     for n in 0..student_names.len() {
         file.write_all(
-            format!("{:<20} {:<20} {:<30} {:<10}\n", student_names[n], matric_numbers[n], departments[n], levels[n])
+            format!("{:<20} | {:<20} | {:<30} | {:<10}\n", student_names[n], matric_numbers[n], departments[n], levels[n])
             .as_bytes()
         )
         .expect("Error writing to file");
     }
 
-    println!("Student details have been written to {}", file_name);
+    println!("Student details written to {}", file_name);
 }

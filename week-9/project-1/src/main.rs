@@ -27,7 +27,7 @@ fn main() {
 
     let drink_categories = vec![lagers, stouts, non_alcoholic];
 
-    let file_name = "drink_categories.txt";
+    let file_name = "drink.txt";
 
     let mut file = File::create(file_name)
         .expect("Error creating or writing to the file");
@@ -53,5 +53,5 @@ fn main() {
         }
     }
 
-    println!("Drink categories saved to drink_categories.txt");
+    println!("Drink categories saved to drink.txt");
 }
