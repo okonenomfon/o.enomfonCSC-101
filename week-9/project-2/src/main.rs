@@ -16,7 +16,7 @@ fn main() {
         .as_bytes())
         .expect("Error writing to file");
 
-    file.write_all(b"           STUDENT INFORMATION MANAGEMENT SYSTEM\n").expect("Error writing to file");
+    file.write_all(b"                         STUDENT INFORMATION MANAGEMENT SYSTEM\n").expect("Error writing to file");
 
     file.write_all(format!("_________________________________________________________________________________________________\n")
         .as_bytes())
