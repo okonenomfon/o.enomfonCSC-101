@@ -12,9 +12,21 @@ fn main() {
 
     let mut file = File::create(file_name).expect("Error: Unable to create or open the file.");
 
+    file.write_all(format!("_________________________________________________________________________________________________\n")
+        .as_bytes())
+        .expect("Error writing to file");
+
     file.write_all(b"           STUDENT INFORMATION MANAGEMENT SYSTEM\n").expect("Error writing to file");
 
+    file.write_all(format!("_________________________________________________________________________________________________\n")
+        .as_bytes())
+        .expect("Error writing to file");
+
     file.write_all(format!("{:<20} | {:<20} | {:<30} | {:<10}\n", "Name", "Matric No.", "Department", "Level")
+        .as_bytes())
+        .expect("Error writing to file");
+
+    file.write_all(format!("_________________________________________________________________________________________________\n")
         .as_bytes())
         .expect("Error writing to file");
 
@@ -24,6 +36,10 @@ fn main() {
             .as_bytes()
         )
         .expect("Error writing to file");
+
+        file.write_all(format!("_________________________________________________________________________________________________\n")
+            .as_bytes())
+            .expect("Error writing to file");
     }
 
     println!("Student details written to {}", file_name);
