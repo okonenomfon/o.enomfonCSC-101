@@ -27,13 +27,10 @@ fn main() {
 
     let drink_categories = vec![lagers, stouts, non_alcoholic];
 
-    let mut file = match File::create("drink_categories.txt") {
-        Ok(file) => file,
-        Err(error) => {
-            println!("Error creating or writing to the file: {}", error);
-            return;
-        }
-    };
+    let file_name = "drink_categories.txt";
+
+    let mut file = File::create(file_name)
+        .expect("Error creating or writing to the file");
 
     let category_names = ["Lager", "Stout", "Non_Alcoholic"];
 

@@ -10,13 +10,7 @@ fn main() {
 
     let file_name = "student_details.txt";
 
-    let mut file = match File::create(file_name) {
-        Ok(file) => file,
-        Err(_) => {
-            println!("Error: Unable to create or open the file.");
-            return;
-        }
-    };
+    let mut file = File::create(file_name).expect("Error: Unable to create or open the file.");
 
     file.write_all(b"           STUDENT INFORMATION MANAGEMENT SYSTEM\n").expect("Error writing to file");
 
@@ -24,9 +18,9 @@ fn main() {
         .as_bytes())
         .expect("Error writing to file");
 
-    for i in 0..student_names.len() {
+    for n in 0..student_names.len() {
         file.write_all(
-            format!("{:<20} {:<20} {:<30} {:<10}\n", student_names[i], matric_numbers[i], departments[i], levels[i])
+            format!("{:<20} {:<20} {:<30} {:<10}\n", student_names[n], matric_numbers[n], departments[n], levels[n])
             .as_bytes()
         )
         .expect("Error writing to file");
