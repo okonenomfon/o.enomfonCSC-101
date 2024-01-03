@@ -113,12 +113,12 @@ fn main() {
         let mut file = File::create("data.txt").expect("Unable to create file");
 
         file.write_all(format!("{:<50}\n", "                                                  NIGERIAN MARKET\n")
-            .as_bytes())
-            .expect("Error writing to file");
+        .as_bytes())
+        .expect("Error writing to file");
 
         file.write_all(format!("| {:<28} | {:<12} | {:<10} | {:<10} | {:<8} | {:<10} | {:<10} | {:<7} |\n", "Name", "Year Founded", "Shares", "Liabilities", "Leverage", "% Leverage", "P. L. M", "Bonus")
-            .as_bytes())
-            .expect("Unable to write to file");
+        .as_bytes())
+        .expect("Unable to write to file");
 
         for company in &companies {
             if company.name == company_name {
@@ -126,8 +126,8 @@ fn main() {
                 let b = bonus(percentage_leverage, company.liabilities);
 
                 file.write_all(format!("| {:<28} | {:<12} | {:<10} | {:<11} | {:.6} | {:.7} | {:.6} | {:.5} |\n", company.name, company.year, company.shares, company.liabilities, leverage, percentage_leverage, leverage_multiplier, b)
-                    .as_bytes())
-                    .expect("Unable to write to file");
+                .as_bytes())
+                .expect("Unable to write to file");
 
                 println!("Data has been pushed to the .txt file.");
                 return;
