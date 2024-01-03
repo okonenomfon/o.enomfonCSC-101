@@ -1,4 +1,4 @@
                                                   NIGERIAN MARKET
 
-| Name                         | Year Founded | Shares     | Liabilities | Leverage | % Leverage | P. L. M    | Bonus   |
-| Champion Breweries Plc.      | 1974         | 25000000   | 8000000     | 0.680000 | 68.0000000 | 136.000000 | 3.40000 |
+| Name                         | Year Founded | Shares     | Liabilities | Leverage | % Leverage | P. L. M   | 5% of %Lev |
+| Honeywell Nigeria Plc.       | 1906         | 34000000   | 9000000     | 0.735294 | 73.5294118 | 54.065744 | 3.67647059 |
